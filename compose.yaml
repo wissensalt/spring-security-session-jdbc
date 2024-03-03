@@ -1,0 +1,9 @@
+services:
+  postgres:
+    image: 'postgres:14-alpine'
+    environment:
+      - 'POSTGRES_USER=postgres'
+      - 'POSTGRES_PASSWORD=pgadmin'
+      - 'POSTGRES_DB=spring_security_session_jdbc'
+    ports:
+      - '5433:5432'

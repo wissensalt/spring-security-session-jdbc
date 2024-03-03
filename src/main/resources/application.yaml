@@ -1,0 +1,18 @@
+spring:
+  docker:
+    compose:
+      enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:5433/04e61cfa-db71-46ce-90b7-e3d102fb7756
+    username: postgres
+    password: pgadmin
+  session:
+    jdbc:
+      initialize-schema: always
+      schema: 'classpath:org/springframework/session/jdbc/schema-@@platform@@.sql'
+      table-name: SPRING_SESSION
+  flyway:
+    enabled: true
+logging:
+  level:
+    web: debug
